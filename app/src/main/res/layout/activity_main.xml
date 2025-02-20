@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#54C3F4"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Header Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Textnify !!"
+        android:textSize="28sp"
+        android:textColor="#8922FF"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Language Selection -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Preferred Language:"
+        android:textColor="#37474F"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="15dp"
+        android:layout_gravity="center">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/spinnerLang"
+            android:background="#2A8793"
+            android:padding="7dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Enhanced Text Input -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="12dp">
+
+        <EditText
+            android:id="@+id/getTextt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#3CC8CD"
+            android:gravity="top|start"
+            android:hint="Enter Your Text here..."
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="16dp"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Speak Button -->
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:text="Speak"
+        android:id="@+id/speakbtns"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:backgroundTint="#4C70AF"
+        android:layout_marginBottom="20dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/laSplashAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="252dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="chatbot.json" />
+
+</LinearLayout>
